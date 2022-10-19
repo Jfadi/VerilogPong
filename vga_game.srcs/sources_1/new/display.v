@@ -1,9 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CECS 361
+// Engineers: 
+//          - Omar Kanj Y Basha Zada 
+//          - Fadi Jarray
+//          - Minhanh Tran
 //////////////////////////////////////////////////////////////////////////////////
-
 
 module display(
     input clk_25,
@@ -15,8 +17,8 @@ module display(
     output reg  [3:0] B_out,
     output reg hsync = 1,
     output reg vsync = 1,
-    output integer Hcount,
-    output integer Vcount
+    output integer H_pos,
+    output integer V_pos
     );
 
 integer hcounter = 0;
@@ -39,12 +41,12 @@ always @(posedge clk_25) begin
         G_out <= 0;
         B_out <= 0;
     end
-        // vcounter <= 0;
-    // end
-    Hcount <= hcounter;
-    Vcount <= vcounter;
+
+    H_pos <= hcounter;
+    V_pos <= vcounter;
 end
 
+// Syncing with counter
 always@(posedge clk_25) begin
     if (hcounter == 0)
         hsync <= 1; // start horizantal syncing
@@ -68,11 +70,5 @@ always@(posedge clk_25) begin
 
     hcounter = hcounter + 1;
 end
-// always@(posedge clk_25) begin
-    //  vsync ? 0 : 0;
-// end
-
-
-
 
 endmodule
