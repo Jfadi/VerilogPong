@@ -1,7 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CECS 361
+// Engineers: 
+//          - Omar Kanj Y Basha Zada 
+//          - Fadi Jarray
+//          - Minhanh Tran
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -17,10 +20,10 @@ module top(
     output hsync,
     output vsync
     );
-    
+
     wire clk_25_internal;
-    
-    display dispaly_instance(.clk_25(clk_25_internal), .R_in(R_in), .G_in(G_in), .B_in(B_in), .R_out(R), .G_out(G), .B_out(B), .hsync(hsync), .vsync(vsync));
+
+    display display_instance(.clk_25(clk_25_internal), .R_in(R_in), .G_in(G_in), .B_in(B_in), .R_out(R), .G_out(G), .B_out(B), .hsync(hsync), .vsync(vsync));
     clk_wiz_0 clock_div(.clk_in1(clk),.reset(reset), .locked(1'b0), .clk_out1(clk_25_internal));
 
 endmodule
