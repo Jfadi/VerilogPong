@@ -1,22 +1,8 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/04/2022 05:49:53 PM
-// Design Name: 
-// Module Name: clock_divider
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Company:
+// Engineer:
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -26,17 +12,26 @@ module game(
     input [9:0] y,
     output [3:0] R,
     output [3:0] G,
-    output [3:0] B
+    output [3:0] B,
+    output reg [4:0] timer_out
     );
 
-reg [24:0] one_sec_counter;
-localparam one_sec = 25_000_000;
+integer clock_cycles = 0;
+reg [7:0] sec_counter = 0;
 
-always@(clk_25) begin
-    if (one_sec_counter == one_sec) begin
-        // spawn a ball
+// adding seconds to the counter
+always@(posedge clk_25) begin
+     // make sure the user started the game
+     if (clock_cycles == 25000000) begin
+        clock_cycles <= 0;
+        sec_counter = sec_counter + 1;
+        end
+    else begin
+        clock_cycles <= clock_cycles + 1;
     end
+end
 
-    one_sec_counter = one_sec_counter + 1;
+always@(sec_counter) begin
+    timer_out <= sec_counter;
 end
 endmodule
