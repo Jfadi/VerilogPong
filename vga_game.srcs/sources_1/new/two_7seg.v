@@ -53,7 +53,7 @@ module two_7seg(
             5'b11011 : cath_cases = 16'b00100101_00011111;
             5'b11100 : cath_cases = 16'b00100101_00000001;
             5'b11101 : cath_cases = 16'b00100101_00001001;
-            5'b11110 : cath_cases = 16'b00100101_00000011;
+            5'b11110 : cath_cases = 16'b00001101_00000011;
             default : cath_cases = 16'b11111111_11111111;
         endcase
         cathode = state ? cath_cases[7:0] : cath_cases[15:8];

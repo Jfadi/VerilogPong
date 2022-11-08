@@ -33,7 +33,8 @@ wire [3:0] R;
 wire [3:0] G;
 wire [3:0] B;
 wire hsync, vsync;
-wire integer hcount, vcount;
+wire [9:0] hcount;
+wire [9:0] vcount;
 always #1 clk = ~clk;
 
 display uut(.clk_25(clk),.R_in(R_in) ,.G_in(G_in),.B_in(B_in),.R_out(R), .G_out(G), .B_out(B), .hsync(hsync), .vsync(vsync), .Hcount(hcount), .Vcount(vcount));

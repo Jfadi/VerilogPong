@@ -17,12 +17,12 @@ module display(
     output reg  [3:0] B_out,
     output reg hsync = 1,
     output reg vsync = 1,
-    output integer H_pos,
-    output integer V_pos
+    output reg [9:0] H_pos,
+    output reg [9:0] V_pos
     );
 
-integer hcounter = 0;
-integer vcounter = 0;
+reg [9:0] hcounter = 0;
+reg [9:0] vcounter = 0;
 
 always @(posedge clk_25) begin
 

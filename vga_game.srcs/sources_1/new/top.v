@@ -29,7 +29,8 @@ module top(
     wire [3:0] R_internal; 
     wire [3:0] G_internal;
     wire [3:0] B_internal;
-    wire integer h_pos_internal, v_pos_internal;
+    wire [9:0] h_pos_internal;
+    wire [9:0] v_pos_internal;
 
     // connection of instances
     display display_instance(.clk_25(clk_25_internal), .R_in(R_internal), .G_in(G_internal), .B_in(B_internal), .R_out(R), .G_out(G), .B_out(B), .hsync(hsync), .vsync(vsync), .H_pos(h_pos_internal), .V_pos(v_pos_internal));
