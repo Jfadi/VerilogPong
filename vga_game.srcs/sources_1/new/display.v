@@ -26,7 +26,7 @@ integer vcounter = 0;
 
 always @(posedge clk_25) begin
 
-    if (hcounter == 0 && vcounter < 480) begin
+    if (vcounter < 480) begin
         R_out <= R_in;
         G_out <= G_in;
         B_out <= B_in;
@@ -54,7 +54,7 @@ always@(posedge clk_25) begin
         hsync <= 0;
     else if(hcounter == 751)
         hsync <= 1;
-    else if(hcounter == 799) begin
+    else if(hcounter == 790) begin
         vcounter <= vcounter + 1;
         hcounter <= 0;
     end
@@ -65,7 +65,7 @@ always@(posedge clk_25) begin
         vsync <= 0;
     else if(vcounter == 491)
         vsync <= 1;
-    else if(vcounter == 524)
+    else if(vcounter == 520)
         vcounter <= 0;
 
     hcounter = hcounter + 1;
