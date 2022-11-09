@@ -1,15 +1,19 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
-// Engineer:
-//
+// Company: CECS 361
+// Engineers: 
+//          - Omar Kanj Y Basha Zada 
+//          - Fadi Jarray
+//          - Minhanh Tran
 //////////////////////////////////////////////////////////////////////////////////
 
 
 module game(
+    input quadA,
+    input quadB,
     input clk_25,
     input [9:0] x,
-    input [9:0] y,
+    input [8:0] y,
     output [3:0] R,
     output [3:0] G,
     output [3:0] B,
@@ -18,20 +22,51 @@ module game(
 
 integer clock_cycles = 0;
 reg [7:0] sec_counter = 0;
+reg [9:0] ms_counter = 0; // can go between 0 -> 1000
 
 // adding seconds to the counter
 always@(posedge clk_25) begin
-     // make sure the user started the game
-     if (clock_cycles == 25000000) begin
-        clock_cycles <= 0;
-        sec_counter = sec_counter + 1;
-        end
-    else begin
-        clock_cycles <= clock_cycles + 1;
-    end
+    // make sure the user started the game
+if (clock_cycles%25000 == 0) begin
+    ms_counter = ms_counter + 1;    // Should count up to 1000 and then reset
+end
+if (clock_cycles == 25000000) begin
+    clock_cycles <= 0;
+    ms_counter <= 0;
+    sec_counter = sec_counter + 1;
+end
+else begin
+    clock_cycles <= clock_cycles + 1;
+end
 end
 
 always@(sec_counter) begin
     timer_out <= sec_counter;
 end
+
+reg [8:0] PaddlePosition;
+reg [2:0] quadAr, quadBr;
+always @(posedge clk_25) quadAr <= {quadAr[1:0], quadA};
+always @(posedge clk_25) quadBr <= {quadBr[1:0], quadB};
+
+always @(posedge ms_counter)
+if(quadA)
+begin
+    if(~&PaddlePosition)        // make sure the value doesn't overflow
+    PaddlePosition <= PaddlePosition + 1;
+end
+else if(quadB)
+begin
+   if(|PaddlePosition)        // make sure the value doesn't underflow
+   PaddlePosition <= PaddlePosition - 1;
+end
+
+wire border = (x[9:3]==0) || (x[9:3]==79) || (y[8:3]==0) || (y[8:3]==59);
+wire paddle = (x>=PaddlePosition+8) && (x<=PaddlePosition+120) && (y[8:4]==27);
+
+
+assign R = border  | paddle;
+assign G = border  | paddle;
+assign B = border  | paddle;
+
 endmodule
