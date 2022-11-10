@@ -61,12 +61,48 @@ begin
    PaddlePosition <= PaddlePosition - 1;
 end
 
+reg [4:0] speed = 10;
+always@(ms_counter) begin
+
+    if(ms_counter%50 == 0) begin
+        if(ball_x_pos == 0) begin
+            negative_x <= 0;
+        end else if(ball_x_pos == 640) begin
+            negative_x <= 1;
+        end
+        if(ball_y_pos == 0) begin
+            negative_y <= 0;
+        end else if(ball_y_pos == 480) begin
+            negative_y <= 1;
+        end
+
+        case ({negative_x,negative_y})
+            2'b00: begin
+                ball_x_pos = ball_x_pos + speed;
+                ball_y_pos = ball_y_pos + speed;
+            end
+            2'b01: begin
+                ball_x_pos = ball_x_pos + speed;
+                ball_y_pos = ball_y_pos - speed;
+            end
+            2'b10: begin
+                ball_x_pos = ball_x_pos - speed;
+                ball_y_pos = ball_y_pos + speed;
+            end
+            2'b11: begin
+                ball_x_pos = ball_x_pos - speed;
+                ball_y_pos = ball_y_pos - speed;
+            end
+        endcase
+    end
+end
+
 wire border = (x[9:3]==0) || (x[9:3]==79) || (y[8:3]==0) || (y[8:3]==59);
 wire paddle = (x>=PaddlePosition+8) && (x<=PaddlePosition+120) && (y[8:4]==27);
+wire ball =   (x>ball_x_pos+4) && (x<ball_x_pos+8) && (x>ball_y_pos+4) && (x<ball_y_pos+8);
 
-
-assign R = border  | paddle;
-assign G = border  | paddle;
-assign B = border  | paddle;
+assign R[3] = border | paddle | ball;
+assign G[3] = border | paddle | ball;
+assign B[3] = border | paddle | ball;
 
 endmodule
