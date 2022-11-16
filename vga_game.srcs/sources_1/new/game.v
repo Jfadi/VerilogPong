@@ -12,6 +12,8 @@ module game(
     input quadA,
     input quadB,
     input clk_25,
+    input y_sign,
+    input y_cord,
     input [9:0] x,
     input [8:0] y,
     output reg [3:0] R,
@@ -60,18 +62,19 @@ end
 always @(posedge clk_25) quadAr <= {quadAr[1:0], quadA};
 always @(posedge clk_25) quadBr <= {quadBr[1:0], quadB};
 
-// paddle logic
 always @(posedge ms_counter) begin
-    if(quadA) begin
-        if(~&paddle_x_pos)          // make sure the value doesn't overflow
-        paddle_x_pos <= paddle_x_pos + 1;
-    end else if(quadB) begin
-       if(|paddle_x_pos)            // make sure the value doesn't underflow
-       paddle_x_pos <= paddle_x_pos - 1;
+    if(!(y_cord == 3'b000)) begin
+        if(y_sign)
+        begin
+            if(~&PaddlePosition)        // make sure the value doesn't overflow
+            PaddlePosition <= PaddlePosition + 1;
+        end
+        else begin
+            if(|PaddlePosition)        // make sure the value doesn't underflow
+            PaddlePosition <= PaddlePosition - 1;
+        end
     end
 end
-
-// ball logic
 always@(posedge ms_clk) begin
     if(~lose_flag && ~win_flag) begin
         if(ms_counter%ball_update_time == 0) begin    // each 10 ms move the ball
