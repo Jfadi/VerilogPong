@@ -13,6 +13,7 @@ module game(
     input quadB,
     input clk_25,
     input y_sign,
+    input y_Cord,
     input [9:0] x,
     input [8:0] y,
     output [3:0] R,
@@ -51,19 +52,18 @@ always @(posedge clk_25) quadAr <= {quadAr[1:0], quadA};
 always @(posedge clk_25) quadBr <= {quadBr[1:0], quadB};
 
 always @(posedge ms_counter)
-if(y_sign)
-begin
+ if(!(y_Cord == 3'b000))
+ if(y_sign)
+ begin
     if(~&PaddlePosition)        // make sure the value doesn't overflow
     PaddlePosition <= PaddlePosition + 1;
-    $display(y_sign, " passed1");
-end
-else
-begin
+ end
+ else
+ begin
    if(|PaddlePosition)        // make sure the value doesn't underflow
    PaddlePosition <= PaddlePosition - 1;
-   $display(y_sign, " passed2");
-end
-
+ end
+ 
 reg [4:0] speed = 1;
 reg [9:0] ball_x_pos = 5;
 reg [9:0] ball_y_pos = 5;
