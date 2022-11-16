@@ -30,16 +30,16 @@ always @(posedge clk_25) begin
         R_out <= R_in;
         G_out <= G_in;
         B_out <= B_in;
-    end
-    else if (hcounter == 640) begin
+    end 
+    else if (vcounter >= 480) begin
         R_out <= 0;
         G_out <= 0;
         B_out <= 0;
     end
-    if (vcounter == 480) begin
-        R_out <= 0;
-        G_out <= 0;
-        B_out <= 0;
+    if (hcounter >= 640) begin
+            R_out <= 0;
+            G_out <= 0;
+            B_out <= 0;
     end
 
     H_pos <= hcounter;
@@ -65,7 +65,7 @@ always@(posedge clk_25) begin
         vsync <= 0;
     else if(vcounter == 491)
         vsync <= 1;
-    else if(vcounter == 520)
+    else if(vcounter == 524)
         vcounter <= 0;
 
     hcounter = hcounter + 1;
