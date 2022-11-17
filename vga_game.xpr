@@ -23,7 +23,7 @@
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
-    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="EnableCoreContainer" Val="TRUE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/vga_game.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/vga_game.ip_user_files/ipstatic"/>
@@ -37,13 +37,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
-    <Option Name="WTIesExportSim" Val="1"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
+    <Option Name="WTIesExportSim" Val="4"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -82,6 +82,20 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/two_7seg.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/iclk_gen.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/spi_master.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -151,6 +165,42 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
+    <FileSet Name="clk_wiz_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_1">
+      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_1/clk_wiz_1.xcix">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1.xml"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1.veo"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1_stub.v"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="mmcm_pll_drp_func_7s_pll.vh"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1.xdc"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="mmcm_pll_drp_func_us_pll.vh"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="mmcm_pll_drp_func_us_mmcm.vh"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="mmcm_pll_drp_func_7s_mmcm.vh"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1.v"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1_board.xdc"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="doc/clk_wiz_v5_3_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="clk_wiz_1.xci" FileRelPathName="clk_wiz_1_clk_wiz.v"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="clk_wiz_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -179,6 +229,16 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="clk_wiz_1_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_1" Part="xc7a100tcsg324-1" ConstrsSet="clk_wiz_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/clk_wiz_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
@@ -193,6 +253,23 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="clk_wiz_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="clk_wiz_1" Description="Default settings for Implementation." SynthRun="clk_wiz_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
   </Runs>

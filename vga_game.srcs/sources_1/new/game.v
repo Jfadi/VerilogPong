@@ -32,7 +32,7 @@ reg ms_clk = 0;
 reg [8:0] paddle_x_pos;
 reg [2:0] quadAr, quadBr;
 reg [4:0] score = 0;
-reg [4:0] max_score = 10;
+reg [4:0] max_score = 3;
 reg [4:0] ball_speed = 1;
 reg [4:0] ball_update_time = 10;
 reg [9:0] ball_x_pos = 5;
@@ -66,12 +66,12 @@ always @(posedge ms_counter) begin
     if(!(y_cord == 3'b000)) begin
         if(y_sign)
         begin
-            if(~&PaddlePosition)        // make sure the value doesn't overflow
-            PaddlePosition <= PaddlePosition + 1;
+            if(~&paddle_x_pos)        // make sure the value doesn't overflow
+            paddle_x_pos <= paddle_x_pos + 1;
         end
         else begin
-            if(|PaddlePosition)        // make sure the value doesn't underflow
-            PaddlePosition <= PaddlePosition - 1;
+            if(|paddle_x_pos)        // make sure the value doesn't underflow
+            paddle_x_pos <= paddle_x_pos - 1;
         end
     end
 end
