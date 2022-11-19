@@ -14,6 +14,7 @@ module game(
     input clk_25,
     input y_sign,
     input y_cord,
+    input reset_game,
     input [9:0] x,
     input [8:0] y,
     output reg [3:0] R,
@@ -58,6 +59,25 @@ always@(posedge clk_25) begin
     end 
 end
 
+always@(posedge reset_game) begin // reset the game
+    // reset registers to default
+    score = 0;
+    ball_speed = 1;
+    ball_update_time = 10;
+    ball_x_pos = 5;
+    ball_y_pos = 5;
+    win_flag = 0;
+    lose_flag = 0;
+end
+
+reg [15:0] reset_color_out = 16'b1111_0000_0000
+always@(posedge ms_clk) begin
+    if(ms_counter%500 == 0) begin
+        reset_color_out <= reset_color_out >> 1;
+        if (reset_color_out == )
+    end
+end
+
 // paddle input
 always @(posedge clk_25) quadAr <= {quadAr[1:0], quadA};
 always @(posedge clk_25) quadBr <= {quadBr[1:0], quadB};
@@ -75,8 +95,9 @@ always @(posedge ms_counter) begin
         end
     end
 end
+
 always@(posedge ms_clk) begin
-    if(~lose_flag && ~win_flag) begin
+    if(~lose_flag && ~win_flag && ~reset_game) begin
         if(ms_counter%ball_update_time == 0) begin    // each 10 ms move the ball
             case ({negative_x,negative_y})
                 2'b00: begin
@@ -141,9 +162,11 @@ always@(*) begin
     game_reg = (border | paddle | ball) ? 4'b1111 : 4'b0000;
     if (win_flag) begin
         {R,G,B} = 12'b0000_1111_0000;
-    end else if(lose_flag)
+    end else if(lose_flag) begin
         {R,G,B} = 12'b1111_0000_0000;
-    else begin
+    end else if(reset_game) begin 
+        {}
+    end else begin
         {R,G,B} <= {game_reg,game_reg,game_reg};
     end
 end

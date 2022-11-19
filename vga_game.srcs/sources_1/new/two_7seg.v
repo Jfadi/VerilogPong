@@ -12,7 +12,7 @@ module two_7seg(
 
     reg [15:0] cath_cases;
     reg state = 1'b0;
-    
+
     reg [11:0] counter = 0;
     always@(posedge clk_25) begin
         if (counter == 2000) begin
