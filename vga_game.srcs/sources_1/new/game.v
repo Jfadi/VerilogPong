@@ -33,7 +33,7 @@ reg ms_clk = 0;
 reg [8:0] paddle_x_pos;
 reg [2:0] quadAr, quadBr;
 reg [4:0] score = 0;
-reg [4:0] max_score = 3;
+reg [4:0] max_score = 10;
 reg [4:0] ball_speed = 1;
 reg [4:0] ball_update_time = 10;
 reg [9:0] ball_x_pos = 5;
@@ -59,22 +59,13 @@ always@(posedge clk_25) begin
     end 
 end
 
-always@(posedge reset_game) begin // reset the game
-    // reset registers to default
-    score = 0;
-    ball_speed = 1;
-    ball_update_time = 10;
-    ball_x_pos = 5;
-    ball_y_pos = 5;
-    win_flag = 0;
-    lose_flag = 0;
-end
+reg [15:0] reset_color_out = 16'b1111_0000_0000;
 
-reg [15:0] reset_color_out = 16'b1111_0000_0000
 always@(posedge ms_clk) begin
     if(ms_counter%500 == 0) begin
         reset_color_out <= reset_color_out >> 1;
-        if (reset_color_out == )
+    end else if (reset_color_out < 16'b0000_0000_1111) begin
+        reset_color_out <= 16'b1111_0000_0000;
     end
 end
 
@@ -147,6 +138,14 @@ always@(posedge ms_clk) begin
                 end
             end
         end
+    end else if(reset_game) begin
+        score <= 0;
+        ball_speed <= 1;
+        ball_update_time <= 10;
+        ball_x_pos <= 5;
+        ball_y_pos <= 5;
+        win_flag <= 0;
+        lose_flag <= 0;
     end
 end
 
@@ -165,7 +164,7 @@ always@(*) begin
     end else if(lose_flag) begin
         {R,G,B} = 12'b1111_0000_0000;
     end else if(reset_game) begin 
-        {}
+        {R,G,B} = reset_color_out;
     end else begin
         {R,G,B} <= {game_reg,game_reg,game_reg};
     end
