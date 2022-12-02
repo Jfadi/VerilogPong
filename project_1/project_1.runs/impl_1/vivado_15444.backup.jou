@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Nov 17 09:01:37 2022
+# Process ID: 15444
+# Current directory: C:/Users/hanh/FinalProject361/VerilogPong/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log BCD_7.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source BCD_7.tcl -notrace
+# Log file: C:/Users/hanh/FinalProject361/VerilogPong/project_1/project_1.runs/impl_1/BCD_7.vdi
+# Journal file: C:/Users/hanh/FinalProject361/VerilogPong/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source BCD_7.tcl -notrace
