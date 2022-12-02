@@ -1,14 +1,23 @@
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 8669943c87ad4301ad93e1039987ecc5 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot two_7seg_tb_behav xil_defaultlib.two_7seg_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 8669943c87ad4301ad93e1039987ecc5 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port in [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sim_1/new/two_7seg_tb.v:32]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port reset [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sim_1/new/top_tb.v:32]
+WARNING: [VRFC 10-278] actual bit length 10 differs from formal bit length 9 for port y [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:38]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.game
+Compiling module xil_defaultlib.display
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
 Compiling module xil_defaultlib.two_7seg
-Compiling module xil_defaultlib.two_7seg_tb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.top_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot two_7seg_tb_behav
+Built simulation snapshot top_tb_behav

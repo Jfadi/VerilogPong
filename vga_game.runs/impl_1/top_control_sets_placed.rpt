@@ -1,0 +1,88 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Dec 01 17:04:33 2022
+| Host         : DESKTOP-R032L4F running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    95 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              87 |           57 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              59 |           18 |
+| Yes          | No                    | No                     |              57 |           23 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              14 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+|           Clock Signal           |                Enable Signal               |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++----------------------------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+|  clock_div/inst/clk_out2         | display_instance/hsync_i_2_n_0             | display_instance/hsync                 |                1 |              1 |
+|  clock_div/inst/clk_out2         | display_instance/vsync_i_2_n_0             | display_instance/vsync                 |                1 |              1 |
+|  clock_div/inst/clk_out1         |                                            |                                        |                1 |              1 |
+|  w_4MHz_BUFG                     | master/cs_i_1_n_0                          |                                        |                1 |              1 |
+|  w_4MHz_BUFG                     | master/mosi_i_1_n_0                        |                                        |                1 |              1 |
+| ~w_4MHz_BUFG                     |                                            |                                        |                1 |              2 |
+|  clk_0                           |                                            |                                        |                4 |              4 |
+|  clk_0                           | game_instance/ball_update_time[4]_i_1_n_0  |                                        |                1 |              4 |
+|  clock_div/inst/clk_out1         |                                            | clock_generation/counter[4]_i_1_n_0    |                1 |              5 |
+|  clk_0                           | game_instance/score[4]_i_1_n_0             |                                        |                2 |              5 |
+|  w_4MHz_BUFG                     | master/FSM_sequential_state_reg[6]_i_1_n_0 |                                        |                3 |              7 |
+|  game_instance/ms_counter_reg[0] | game_instance/paddle_x_pos                 |                                        |                3 |              9 |
+|  clock_div/inst/clk_out2         |                                            | game_instance/ms_counter               |                4 |             10 |
+|  clock_div/inst/clk_out2         | display_instance/vcounter0                 |                                        |                6 |             10 |
+|  clock_div/inst/clk_out2         |                                            | display_instance/p_0_in                |                4 |             12 |
+|  clk_0                           | game_instance/reset_color_out[11]_i_2_n_0  | game_instance/reset_color_out          |                2 |             12 |
+|  clk_0                           | game_instance/ball_x_pos0                  |                                        |                6 |             20 |
+|  clock_div/inst/clk_out2         |                                            | game_instance/clock_cycles[31]_i_1_n_0 |                9 |             32 |
+|  w_4MHz_BUFG                     |                                            |                                        |               35 |             37 |
+|  clock_div/inst/clk_out2         |                                            |                                        |               16 |             43 |
++----------------------------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     5 |
+| 2      |                     1 |
+| 4      |                     2 |
+| 5      |                     2 |
+| 7      |                     1 |
+| 9      |                     1 |
+| 10     |                     2 |
+| 12     |                     2 |
+| 16+    |                     4 |
++--------+-----------------------+
+
+

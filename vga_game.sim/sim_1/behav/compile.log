@@ -16,5 +16,9 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ZeroX/Documents/CECS 361 P
 INFO: [VRFC 10-311] analyzing module clock_divider_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sim_1/new/two_7seg_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module two_7seg_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sim_1/new/game_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

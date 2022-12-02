@@ -1,0 +1,48 @@
+Unable to capture context for thread 6468 in process 3684, can not generate back trace
+Unable to capture context for thread 8068 in process 3684, can not generate back trace
+Unable to capture context for thread 8420 in process 3684, can not generate back trace
+Unable to capture context for thread 9676 in process 3684, can not generate back trace
+Unable to capture context for thread 9396 in process 3684, can not generate back trace
+Unable to capture context for thread 9440 in process 3684, can not generate back trace
+Unable to capture context for thread 7008 in process 3684, can not generate back trace
+Exception at PC 0x00007FF9B006BB93
+Printing stacktrace...
+
+Unable to capture context for thread 13788 in process 3684, can not generate back trace
+Unable to capture context for thread 3372 in process 3684, can not generate back trace
+Exception at PC 0x00007FFA4E49CD29
+Unable to capture context for thread 6340 in process 3684, can not generate back trace
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+[0]  [0x00007FF9B006BB93]
+[1]  [0x00007FF9B006BB93]
+[2]  [0x00007FF9B006B4A1]
+[3]  [0x00007FF9B006B459]
+[4]  [0x00007FF9B00519FE]
+[5]  [0x00007FF9B0050ED1]
+[6]  [0x00007FF9B0050D76]
+[7]  [0x00007FF9AFFF79F6]
+[8]  [0x00007FF9AFFE7AFB]
+[9]  [0x00007FF9B010E90A]
+[10]  [0x00007FF9B0129F87]
+[11]  [0x00007FF9B012A05F]
+[12] (BaseThreadInitThunk+0x14) [0x00007FFA4F567034]
+[13] (RtlUserThreadStart+0x21) [0x00007FFA507426A1]
+Done
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29
+Exception at PC 0x00007FFA4E49CD29

@@ -2,13 +2,13 @@
 # Webtalk v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Thu Nov 03 18:13:57 2022
-# Process ID: 18236
+# Start of session at: Tue Nov 15 19:15:59 2022
+# Process ID: 3992
 # Current directory: C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.sim/sim_1/behav/xsim.dir/two_7seg_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.sim/sim_1/behav/xsim.dir/top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.sim/sim_1/behav/webtalk.log
 # Journal file: C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/ZeroX/Documents/CECS -notrace
 couldn't read file "C:/Users/ZeroX/Documents/CECS": permission denied
-INFO: [Common 17-206] Exiting Webtalk at Thu Nov 03 18:13:57 2022...
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 15 19:15:59 2022...

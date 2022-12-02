@@ -1,0 +1,860 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Dec 01 17:03:12 2022
+# Process ID: 80
+# Current directory: C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/top.vds
+# Journal file: C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/clk_wiz_1/clk_wiz_1.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/clk_wiz_1/clk_wiz_1.dcp]
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4388 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 296.910 ; gain = 86.676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:11]
+INFO: [Synth 8-638] synthesizing module 'game' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:11]
+INFO: [Synth 8-256] done synthesizing module 'game' (1#1) [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:11]
+WARNING: [Synth 8-689] width (32) of port connection 'x' does not match port width (10) of module 'game' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:44]
+WARNING: [Synth 8-689] width (32) of port connection 'y' does not match port width (9) of module 'game' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:44]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/display.v:10]
+INFO: [Synth 8-256] done synthesizing module 'display' (2#1) [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/display.v:10]
+WARNING: [Synth 8-689] width (32) of port connection 'H_pos' does not match port width (10) of module 'display' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:45]
+WARNING: [Synth 8-689] width (32) of port connection 'V_pos' does not match port width (10) of module 'display' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:45]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_1' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_1' (3#1) [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/realtime/clk_wiz_1_stub.v:5]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:46]
+INFO: [Synth 8-638] synthesizing module 'two_7seg' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/two_7seg.v:6]
+INFO: [Synth 8-256] done synthesizing module 'two_7seg' (4#1) [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/two_7seg.v:6]
+INFO: [Synth 8-638] synthesizing module 'iclk_gen' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/iclk_gen.v:4]
+INFO: [Synth 8-256] done synthesizing module 'iclk_gen' (5#1) [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/iclk_gen.v:4]
+INFO: [Synth 8-638] synthesizing module 'spi_master' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/spi_master.v:1]
+	Parameter POWER_UP bound to: 7'b0000000 
+	Parameter BEGIN_SPIW bound to: 7'b0000001 
+	Parameter SEND_WCMD7 bound to: 7'b0000010 
+	Parameter SEND_WCMD6 bound to: 7'b0000011 
+	Parameter SEND_WCMD5 bound to: 7'b0000100 
+	Parameter SEND_WCMD4 bound to: 7'b0000101 
+	Parameter SEND_WCMD3 bound to: 7'b0000110 
+	Parameter SEND_WCMD2 bound to: 7'b0000111 
+	Parameter SEND_WCMD1 bound to: 7'b0001000 
+	Parameter SEND_WCMD0 bound to: 7'b0001001 
+	Parameter SEND_WADDR7 bound to: 7'b0001010 
+	Parameter SEND_WADDR6 bound to: 7'b0001011 
+	Parameter SEND_WADDR5 bound to: 7'b0001100 
+	Parameter SEND_WADDR4 bound to: 7'b0001101 
+	Parameter SEND_WADDR3 bound to: 7'b0001110 
+	Parameter SEND_WADDR2 bound to: 7'b0001111 
+	Parameter SEND_WADDR1 bound to: 7'b0010000 
+	Parameter SEND_WADDR0 bound to: 7'b0010001 
+	Parameter SEND_BYTE7 bound to: 7'b0010010 
+	Parameter SEND_BYTE6 bound to: 7'b0010011 
+	Parameter SEND_BYTE5 bound to: 7'b0010100 
+	Parameter SEND_BYTE4 bound to: 7'b0010101 
+	Parameter SEND_BYTE3 bound to: 7'b0010110 
+	Parameter SEND_BYTE2 bound to: 7'b0010111 
+	Parameter SEND_BYTE1 bound to: 7'b0011000 
+	Parameter SEND_BYTE0 bound to: 7'b0011001 
+	Parameter WAIT bound to: 7'b0011010 
+	Parameter BEGIN_SPIR bound to: 7'b0011011 
+	Parameter SEND_RCMD7 bound to: 7'b0011100 
+	Parameter SEND_RCMD6 bound to: 7'b0011101 
+	Parameter SEND_RCMD5 bound to: 7'b0011110 
+	Parameter SEND_RCMD4 bound to: 7'b0011111 
+	Parameter SEND_RCMD3 bound to: 7'b0100000 
+	Parameter SEND_RCMD2 bound to: 7'b0100001 
+	Parameter SEND_RCMD1 bound to: 7'b0100010 
+	Parameter SEND_RCMD0 bound to: 7'b0100011 
+	Parameter SEND_RADDR7 bound to: 7'b0100100 
+	Parameter SEND_RADDR6 bound to: 7'b0100101 
+	Parameter SEND_RADDR5 bound to: 7'b0100110 
+	Parameter SEND_RADDR4 bound to: 7'b0100111 
+	Parameter SEND_RADDR3 bound to: 7'b0101000 
+	Parameter SEND_RADDR2 bound to: 7'b0101001 
+	Parameter SEND_RADDR1 bound to: 7'b0101010 
+	Parameter SEND_RADDR0 bound to: 7'b0101011 
+	Parameter REC_XLSB7 bound to: 7'b0101100 
+	Parameter REC_XLSB6 bound to: 7'b0101101 
+	Parameter REC_XLSB5 bound to: 7'b0101110 
+	Parameter REC_XLSB4 bound to: 7'b0101111 
+	Parameter REC_XLSB3 bound to: 7'b0110000 
+	Parameter REC_XLSB2 bound to: 7'b0110001 
+	Parameter REC_XLSB1 bound to: 7'b0110010 
+	Parameter REC_XLSB0 bound to: 7'b0110011 
+	Parameter REC_XMSB7 bound to: 7'b0110100 
+	Parameter REC_XMSB6 bound to: 7'b0110101 
+	Parameter REC_XMSB5 bound to: 7'b0110110 
+	Parameter REC_XMSB4 bound to: 7'b0110111 
+	Parameter REC_XMSB3 bound to: 7'b0111000 
+	Parameter REC_XMSB2 bound to: 7'b0111001 
+	Parameter REC_XMSB1 bound to: 7'b0111010 
+	Parameter REC_XMSB0 bound to: 7'b0111011 
+	Parameter REC_YLSB7 bound to: 7'b0111100 
+	Parameter REC_YLSB6 bound to: 7'b0111101 
+	Parameter REC_YLSB5 bound to: 7'b0111110 
+	Parameter REC_YLSB4 bound to: 7'b0111111 
+	Parameter REC_YLSB3 bound to: 7'b1000000 
+	Parameter REC_YLSB2 bound to: 7'b1000001 
+	Parameter REC_YLSB1 bound to: 7'b1000010 
+	Parameter REC_YLSB0 bound to: 7'b1000011 
+	Parameter REC_YMSB7 bound to: 7'b1000100 
+	Parameter REC_YMSB6 bound to: 7'b1000101 
+	Parameter REC_YMSB5 bound to: 7'b1000110 
+	Parameter REC_YMSB4 bound to: 7'b1000111 
+	Parameter REC_YMSB3 bound to: 7'b1001000 
+	Parameter REC_YMSB2 bound to: 7'b1001001 
+	Parameter REC_YMSB1 bound to: 7'b1001010 
+	Parameter REC_YMSB0 bound to: 7'b1001011 
+	Parameter REC_ZLSB7 bound to: 7'b1001100 
+	Parameter REC_ZLSB6 bound to: 7'b1001101 
+	Parameter REC_ZLSB5 bound to: 7'b1001110 
+	Parameter REC_ZLSB4 bound to: 7'b1001111 
+	Parameter REC_ZLSB3 bound to: 7'b1010000 
+	Parameter REC_ZLSB2 bound to: 7'b1010001 
+	Parameter REC_ZLSB1 bound to: 7'b1010010 
+	Parameter REC_ZLSB0 bound to: 7'b1010011 
+	Parameter REC_ZMSB7 bound to: 7'b1010100 
+	Parameter REC_ZMSB6 bound to: 7'b1010101 
+	Parameter REC_ZMSB5 bound to: 7'b1010110 
+	Parameter REC_ZMSB4 bound to: 7'b1010111 
+	Parameter REC_ZMSB3 bound to: 7'b1011000 
+	Parameter REC_ZMSB2 bound to: 7'b1011001 
+	Parameter REC_ZMSB1 bound to: 7'b1011010 
+	Parameter REC_ZMSB0 bound to: 7'b1011011 
+	Parameter END_SPI bound to: 7'b1011100 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/spi_master.v:154]
+INFO: [Synth 8-256] done synthesizing module 'spi_master' (6#1) [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/spi_master.v:1]
+INFO: [Synth 8-256] done synthesizing module 'top' (7#1) [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:11]
+WARNING: [Synth 8-3331] design game has unconnected port quadA
+WARNING: [Synth 8-3331] design game has unconnected port quadB
+WARNING: [Synth 8-3331] design top has unconnected port R_in[3]
+WARNING: [Synth 8-3331] design top has unconnected port R_in[2]
+WARNING: [Synth 8-3331] design top has unconnected port R_in[1]
+WARNING: [Synth 8-3331] design top has unconnected port R_in[0]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[3]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[2]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[1]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[0]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[3]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[2]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[1]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 334.824 ; gain = 124.590
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 334.824 ; gain = 124.590
+---------------------------------------------------------------------------------
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/clk_wiz_1/clk_wiz_1.dcp]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_1' instantiated as 'clock_div' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/top.v:46]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/dcp/clk_wiz_1_in_context.xdc] for cell 'clock_div'
+Finished Parsing XDC File [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/dcp/clk_wiz_1_in_context.xdc] for cell 'clock_div'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file c:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file c:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc will not be read for any cell of this module.
+Parsing XDC File [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/sources/NexysA7-100t.xdc]
+Finished Parsing XDC File [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/sources/NexysA7-100t.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/sources/NexysA7-100t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/dont_touch.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0}'. [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/dont_touch.xdc:7]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0}'. [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/dont_touch.xdc:10]
+WARNING: [Vivado 12-180] No cells matched '/inst'. [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/dont_touch.xdc:10]
+Finished Parsing XDC File [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/dont_touch.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/dont_touch.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 656.191 ; gain = 0.000
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/clk_wiz_1/clk_wiz_1.dcp]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 656.191 ; gain = 445.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 656.191 ; gain = 445.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/dcp/clk_wiz_1_in_context.xdc}, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/.Xil/Vivado-80-DESKTOP-R032L4F/dcp/clk_wiz_1_in_context.xdc}, line 5).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 656.191 ; gain = 445.957
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:82]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:97]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:97]
+INFO: [Synth 8-5545] ROM "clock_cycles" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ms_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "reset_color_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ball_x_pos" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "win_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'spi_master'
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_reg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "Z" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "X" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'R_reg' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:167]
+WARNING: [Synth 8-327] inferring latch for variable 'G_reg' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:167]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg' [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/game.v:167]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                POWER_UP |                          0000000 |                          0000000
+              BEGIN_SPIW |                          0000001 |                          0000001
+              SEND_WCMD7 |                          0000010 |                          0000010
+              SEND_WCMD6 |                          0000011 |                          0000011
+              SEND_WCMD5 |                          0000100 |                          0000100
+              SEND_WCMD4 |                          0000101 |                          0000101
+              SEND_WCMD3 |                          0000110 |                          0000110
+              SEND_WCMD2 |                          0000111 |                          0000111
+              SEND_WCMD1 |                          0001000 |                          0001000
+              SEND_WCMD0 |                          0001001 |                          0001001
+             SEND_WADDR7 |                          0001010 |                          0001010
+             SEND_WADDR6 |                          0001011 |                          0001011
+             SEND_WADDR5 |                          0001100 |                          0001100
+             SEND_WADDR4 |                          0001101 |                          0001101
+             SEND_WADDR3 |                          0001110 |                          0001110
+             SEND_WADDR2 |                          0001111 |                          0001111
+             SEND_WADDR1 |                          0010000 |                          0010000
+             SEND_WADDR0 |                          0010001 |                          0010001
+              SEND_BYTE7 |                          0010010 |                          0010010
+              SEND_BYTE6 |                          0010011 |                          0010011
+              SEND_BYTE5 |                          0010100 |                          0010100
+              SEND_BYTE4 |                          0010101 |                          0010101
+              SEND_BYTE3 |                          0010110 |                          0010110
+              SEND_BYTE2 |                          0010111 |                          0010111
+              SEND_BYTE1 |                          0011000 |                          0011000
+              SEND_BYTE0 |                          0011001 |                          0011001
+                    WAIT |                          0011010 |                          0011010
+              BEGIN_SPIR |                          0011011 |                          0011011
+              SEND_RCMD7 |                          0011100 |                          0011100
+              SEND_RCMD6 |                          0011101 |                          0011101
+              SEND_RCMD5 |                          0011110 |                          0011110
+              SEND_RCMD4 |                          0011111 |                          0011111
+              SEND_RCMD3 |                          0100000 |                          0100000
+              SEND_RCMD2 |                          0100001 |                          0100001
+              SEND_RCMD1 |                          0100010 |                          0100010
+              SEND_RCMD0 |                          0100011 |                          0100011
+             SEND_RADDR7 |                          0100100 |                          0100100
+             SEND_RADDR6 |                          0100101 |                          0100101
+             SEND_RADDR5 |                          0100110 |                          0100110
+             SEND_RADDR4 |                          0100111 |                          0100111
+             SEND_RADDR3 |                          0101000 |                          0101000
+             SEND_RADDR2 |                          0101001 |                          0101001
+             SEND_RADDR1 |                          0101010 |                          0101010
+             SEND_RADDR0 |                          0101011 |                          0101011
+               REC_XLSB7 |                          0101100 |                          0101100
+               REC_XLSB6 |                          0101101 |                          0101101
+               REC_XLSB5 |                          0101110 |                          0101110
+               REC_XLSB4 |                          0101111 |                          0101111
+               REC_XLSB3 |                          0110000 |                          0110000
+               REC_XLSB2 |                          0110001 |                          0110001
+               REC_XLSB1 |                          0110010 |                          0110010
+               REC_XLSB0 |                          0110011 |                          0110011
+               REC_XMSB7 |                          0110100 |                          0110100
+               REC_XMSB6 |                          0110101 |                          0110101
+               REC_XMSB5 |                          0110110 |                          0110110
+               REC_XMSB4 |                          0110111 |                          0110111
+               REC_XMSB3 |                          0111000 |                          0111000
+               REC_XMSB2 |                          0111001 |                          0111001
+               REC_XMSB1 |                          0111010 |                          0111010
+               REC_XMSB0 |                          0111011 |                          0111011
+               REC_YLSB7 |                          0111100 |                          0111100
+               REC_YLSB6 |                          0111101 |                          0111101
+               REC_YLSB5 |                          0111110 |                          0111110
+               REC_YLSB4 |                          0111111 |                          0111111
+               REC_YLSB3 |                          1000000 |                          1000000
+               REC_YLSB2 |                          1000001 |                          1000001
+               REC_YLSB1 |                          1000010 |                          1000010
+               REC_YLSB0 |                          1000011 |                          1000011
+               REC_YMSB7 |                          1000100 |                          1000100
+               REC_YMSB6 |                          1000101 |                          1000101
+               REC_YMSB5 |                          1000110 |                          1000110
+               REC_YMSB4 |                          1000111 |                          1000111
+               REC_YMSB3 |                          1001000 |                          1001000
+               REC_YMSB2 |                          1001001 |                          1001001
+               REC_YMSB1 |                          1001010 |                          1001010
+               REC_YMSB0 |                          1001011 |                          1001011
+               REC_ZLSB7 |                          1001100 |                          1001100
+               REC_ZLSB6 |                          1001101 |                          1001101
+               REC_ZLSB5 |                          1001110 |                          1001110
+               REC_ZLSB4 |                          1001111 |                          1001111
+               REC_ZLSB3 |                          1010000 |                          1010000
+               REC_ZLSB2 |                          1010001 |                          1010001
+               REC_ZLSB1 |                          1010010 |                          1010010
+               REC_ZLSB0 |                          1010011 |                          1010011
+               REC_ZMSB7 |                          1010100 |                          1010100
+               REC_ZMSB6 |                          1010101 |                          1010101
+               REC_ZMSB5 |                          1010110 |                          1010110
+               REC_ZMSB4 |                          1010111 |                          1010111
+               REC_ZMSB3 |                          1011000 |                          1011000
+               REC_ZMSB2 |                          1011001 |                          1011001
+               REC_ZMSB1 |                          1011010 |                          1011010
+               REC_ZMSB0 |                          1011011 |                          1011011
+                 END_SPI |                          1011100 |                          1011100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'spi_master'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 656.191 ; gain = 445.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 4     
+	               10 Bit    Registers := 7     
+	                9 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	  93 Input     32 Bit        Muxes := 1     
+	  93 Input     16 Bit        Muxes := 6     
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	  93 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 12    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 121   
+	   3 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 2     
+	  93 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module game 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 9     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 20    
+	   3 Input      1 Bit        Muxes := 1     
+Module display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 4     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 2     
+Module two_7seg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module iclk_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module spi_master 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	  93 Input     32 Bit        Muxes := 1     
+	  93 Input     16 Bit        Muxes := 6     
+	  93 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 94    
+	  93 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clock_cycles" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ms_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "reset_color_out" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3936] Found unconnected internal register 'display_instance/V_pos_reg' and it is trimmed from '10' to '9' bits. [C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.srcs/sources_1/new/display.v:46]
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "display_instance/hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "display_instance/hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "display_instance/vsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "display_instance/vsync" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design top has port anode[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port anode[6] driven by constant 1
+WARNING: [Synth 8-3917] design top has port anode[5] driven by constant 1
+WARNING: [Synth 8-3917] design top has port anode[4] driven by constant 1
+WARNING: [Synth 8-3917] design top has port anode[3] driven by constant 1
+WARNING: [Synth 8-3917] design top has port anode[2] driven by constant 1
+WARNING: [Synth 8-3331] design game has unconnected port quadA
+WARNING: [Synth 8-3331] design game has unconnected port quadB
+WARNING: [Synth 8-3331] design top has unconnected port R_in[3]
+WARNING: [Synth 8-3331] design top has unconnected port R_in[2]
+WARNING: [Synth 8-3331] design top has unconnected port R_in[1]
+WARNING: [Synth 8-3331] design top has unconnected port R_in[0]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[3]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[2]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[1]
+WARNING: [Synth 8-3331] design top has unconnected port G_in[0]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[3]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[2]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[1]
+WARNING: [Synth 8-3331] design top has unconnected port B_in[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\game_instance/reset_color_out_reg[15] )
+INFO: [Synth 8-3886] merging instance 'game_instance/reset_color_out_reg[14]' (FDRE) to 'game_instance/reset_color_out_reg[15]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\game_instance/ball_speed_reg[0] )
+INFO: [Synth 8-3886] merging instance 'game_instance/ball_speed_reg[1]' (FDRE) to 'game_instance/ball_speed_reg[2]'
+INFO: [Synth 8-3886] merging instance 'game_instance/ball_speed_reg[2]' (FDRE) to 'game_instance/ball_speed_reg[3]'
+INFO: [Synth 8-3886] merging instance 'game_instance/ball_speed_reg[3]' (FDRE) to 'game_instance/ball_speed_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\game_instance/ball_speed_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\game_instance/reset_color_out_reg[15] )
+INFO: [Synth 8-3886] merging instance 'game_instance/reset_color_out_reg[13]' (FDRE) to 'game_instance/reset_color_out_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\game_instance/reset_color_out_reg[15] )
+WARNING: [Synth 8-3332] Sequential element (game_instance/R_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/R_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/R_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/R_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/G_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/G_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/G_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/G_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/B_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/B_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/B_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/B_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/ball_speed_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/ball_speed_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/reset_color_out_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (game_instance/reset_color_out_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/temp_DATA_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Z_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/Y_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (master/X_reg[0]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 656.191 ; gain = 445.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+-------------------------+---------------+----------------+
+|Module Name | RTL Object              | Depth x Width | Implemented As | 
++------------+-------------------------+---------------+----------------+
+|two_7seg    | cath_cases              | 32x16         | LUT            | 
+|top         | seg_instance/cath_cases | 32x16         | LUT            | 
++------------+-------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_div/clk_out1' to pin 'clock_div/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_div/clk_out2' to pin 'clock_div/bbstub_clk_out2/O'
+WARNING: [Synth 8-565] redefining clock 'clk'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 656.191 ; gain = 445.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 656.191 ; gain = 445.957
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (game_instance/ball_update_time_reg[0]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_1     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_1 |     1|
+|2     |BUFG      |     2|
+|3     |CARRY4    |   142|
+|4     |LUT1      |   128|
+|5     |LUT2      |   135|
+|6     |LUT3      |   221|
+|7     |LUT4      |   178|
+|8     |LUT5      |   242|
+|9     |LUT6      |   448|
+|10    |MUXF7     |    50|
+|11    |MUXF8     |     5|
+|12    |FDRE      |   211|
+|13    |FDSE      |     6|
+|14    |IBUF      |     3|
+|15    |OBUF      |    33|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------+-----------+------+
+|      |Instance           |Module     |Cells |
++------+-------------------+-----------+------+
+|1     |top                |           |  1807|
+|2     |  clock_generation |iclk_gen   |    13|
+|3     |  display_instance |display    |   130|
+|4     |  game_instance    |game       |  1072|
+|5     |  master           |spi_master |   505|
+|6     |  seg_instance     |two_7seg   |    40|
++------+-------------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 101 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 662.246 ; gain = 116.117
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 662.246 ; gain = 452.012
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 145 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+170 Infos, 129 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 662.246 ; gain = 444.863
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ZeroX/Documents/CECS 361 PONG PROJECT/VerilogPong/vga_game.runs/synth_1/top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 662.246 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 01 17:03:56 2022...
