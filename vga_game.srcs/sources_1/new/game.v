@@ -20,6 +20,7 @@ module game(
     output reg [3:0] R,
     output reg [3:0] G,
     output reg [3:0] B,
+    output gameend_flag_out,
     output [4:0] score_out
     );
 
@@ -42,6 +43,9 @@ reg win_flag = 0;
 reg lose_flag = 0;
 reg negative_x = 0;
 reg negative_y = 0;
+
+assign gameend_flag_out = win_flag | lose_flag;
+
 
 // seconds counter
 always@(posedge clk_25) begin
@@ -118,7 +122,7 @@ always@(posedge ms_clk) begin
 
             if(ball_y_pos <= 0) begin
                 negative_y <= 0;
-            end else if(((ball_x_pos+30 > paddle_x_pos+8) && (ball_x_pos+30 < paddle_x_pos+120) && (ball_y_pos+30 > 432))) begin
+            end else if((ball_x_pos+30 > paddle_x_pos+8) && (ball_x_pos+30 < paddle_x_pos+120) && (ball_y_pos+30 > 432) && (ball_y_pos+30 < 438)) begin
                 if (ball_update_time > 4 && ~negative_y) begin 
                     ball_update_time = ball_update_time - 2;
                 end
@@ -131,8 +135,6 @@ always@(posedge ms_clk) begin
                 negative_y <= 1;
             end else if (ball_y_pos >= 480) begin
                 // lose flag
-                score = 0;
-                // RESET GAME
                 if(~win_flag) begin
                     lose_flag = 1;
                 end
