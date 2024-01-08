@@ -5,6 +5,10 @@ Compatible with Verilog version: 2016.4 and higher
 
 Board used: Nexys A7-100T
 
+## Video Demo
+
+[![Watch the video](http://img.youtube.com/vi/VaozI-b1hNU/0.jpg)](https://www.youtube.com/watch?v=VaozI-b1hNU)
+
 ## Game
 
 
